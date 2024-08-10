@@ -12,7 +12,7 @@ load_dotenv()
 
 UPLOAD_FOLDER = os.getenv('UPLOAD_FOLDER')
 DOWNLOAD_FOLDER = os.getenv('DOWNLOAD_FOLDER')
-ALLOWED_EXTENSIONS = os.getenv('ALLOWED_EXTENSIONS').split(',')
+ALLOWED_EXTENSIONS = os.getenv('ALLOWED_EXTENSIONS')
 
 app = Flask(__name__)
 
