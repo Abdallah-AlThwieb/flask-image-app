@@ -18,10 +18,14 @@ app = Flask(__name__)
 
 app.secret_key = os.getenv('SECRET_KEY')
 
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['DOWNLOAD_FOLDER'] = DOWNLOAD_FOLDER
+app.config['ALLOWED_EXTENSIONS'] = ALLOWED_EXTENSIONS
 app.config['S3_BUCKET'] = os.getenv('S3_BUCKET')
 app.config['S3_KEY'] = os.getenv('S3_KEY')
 app.config['S3_SECRET'] = os.getenv('S3_SECRET')
 app.config['S3_LOCATION'] = os.getenv('S3_LOCATION')
+
 
 app.register_blueprint(actionsbp)
 app.register_blueprint(filtersbp)
